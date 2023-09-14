@@ -17,9 +17,10 @@ shows = Channel.objects.filter(language_id=1, status='live', is_premium=True, is
 
 data = []
 for show in shows:
+    id = show.id
     title = get_english_translation_of_text(show.title)
     desc = get_english_translation_of_text(show.description)
-    doc = {'title': title, 'description' : desc}
+    doc = {'id':id, 'title': title, 'description' : desc}
     data.append(doc)
 
 with open("shows.json", "w") as outfile:
