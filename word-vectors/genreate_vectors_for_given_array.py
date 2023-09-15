@@ -17,5 +17,5 @@ for word in array:
     data.append((word, word_vectors))
 
 
-with open("/content/categories-with-vectors.json", "w") as outfile:
-    json.dump(data, outfile)
+with open("/home/ubuntu/kukufm-py/kukufm-py/word-set.json", "w") as outfile:
+    json.dump(word_set, outfile)

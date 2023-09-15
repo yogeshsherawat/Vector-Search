@@ -2,7 +2,8 @@ import json
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
-def load_json_file(filepath):
+def load_json_data_from_json_file(filepath):
+    import json
     with open(filepath, "r") as f:
         json_data = f.read()
 
